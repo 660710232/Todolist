@@ -9,5 +9,5 @@ disk:
   mountPath: /rails/storage
   sizeGB: 1
 envVars:
-key: b778492b27b163120a92253d69d3fe0a
+key: RAILS_MASTER_KEY
 sync: false
