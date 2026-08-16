@@ -1,0 +1,7 @@
+<li id="<%= dom_id(task) %>" class="task-item <%= 'completed' if task.completed? %>">
+    <span class="task-title"><%= task.title %></span>
+    <div class="task-actions">
+        <%= button_to task.completed? ? "Undo" : "Done", toggle_task_path(task), method: :patch, class: "btn-text" %>
+        <%= button_to "Delete", task_path(task), method: :delete, class: "btn-text btn-danger" %>
+    </div>
+</li>

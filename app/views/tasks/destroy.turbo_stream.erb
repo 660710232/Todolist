@@ -1,0 +1,4 @@
+<%= turbo_stream.remove dom_id(@task) %>
+<%= turbo_stream.replace "stats_bar" do %>
+    <%= render "stats" %>
+<% end %>

@@ -1,0 +1,16 @@
+<%= turbo_frame_tag "stats_bar" do %>
+      <div class="stats-bar">
+        <div class="stats-item">
+          <span class="stat-label">Total Tasks:</span>
+          <span class="stat-number"><%= Task.count %></span>
+        </div>
+        <div class="stats-item">
+          <span class="stat-label">Completed Tasks:</span>
+          <span class="stat-number"><%= Task.where(completed: true).count %></span>
+        </div>
+        <div class="stats-item">
+          <span class="stat-label">Pending Tasks:</span>
+          <span class="stat-number"><%= Task.where(completed: false).count %></span>
+        </div>
+    </div>
+<% end %>

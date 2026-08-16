@@ -1,0 +1,5 @@
+<% turbo_frame_tag "notask" do %>
+    <% if Task.count == 0 %>
+        <p class="notask">No tasks yet. Add one above!</p>
+    <% end %>
+<% end %>

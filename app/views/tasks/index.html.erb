@@ -1,0 +1,22 @@
+<main class="todo-container">
+  <div class="todo-container">
+    <h1>Tasks</h1>
+
+    <%= render "stats" %>
+
+    <div class="add-task-section">
+      <%= form_with model: @task, class: "task-form", id: "task-form" do |f| %>
+        <%= f.text_field :title, placeholder: "Add Here...", autofocus: true, required: true %>
+        <%= f.submit "Add", class: "btn-text" %>
+      <% end %>
+    </div>
+
+    <ul class="task-list" id="task-list">
+      <%= render @tasks %>
+    </ul>
+
+    <div>
+      <%= render "notask" %>
+    </div>
+  </div>
+</main>

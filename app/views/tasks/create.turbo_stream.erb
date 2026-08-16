@@ -1,0 +1,12 @@
+<%= turbo_stream.prepend "task-list", partial: "task", locals: { task: @task } %>
+
+<%= turbo_stream.replace "task-form" do %>
+    <%= form_with model: Task.new, class: "task-form", id: "task-form" do |f| %>
+        <%= f.text_field :title, placeholder: "Add Here...", autofocus: true, required: true %>
+        <%= f.submit "Add", class: "btn-text" %>
+    <% end %>
+<% end %>
+
+<%= turbo_stream.replace "stats_bar" do %>
+    <%= render "stats" %>
+<% end %>

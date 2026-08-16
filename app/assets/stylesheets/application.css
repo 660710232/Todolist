@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+  .todo-container {
+    max-width: 480px;
+    margin: 4rem auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111;
+  }
+  .todo-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin-bottom: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 5px;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .task-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .task-form input[type="text"] {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  .task-form input[type="submit"] {
+    padding: 0.5rem 1rem;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .task-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .btn-text {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+  }
+  .btn-text:hover { color: #111; }
+  .btn-danger:hover { color: #d00; }
+  .empty-state {
+    color: #888;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+  }
